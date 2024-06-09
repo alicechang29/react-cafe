@@ -49,8 +49,8 @@ function App() {
 
   //fn to addItems to menu //FIXME: not done
   async function addItems(item, type) {
-    // const addNewItem = await SnackOrBoozeApi.addItem(item, type);
-    // setItemsFetch({ snacks, drinks, isLoading: false });
+    const addNewItem = await SnackOrBoozeApi.addItem(item, type);
+    setItemsFetch({ snacks, drinks, isLoading: false });
   }
 
 

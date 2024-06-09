@@ -21,8 +21,7 @@ function AddItemForm({ addItem }) {
   const [formData, setFormData] = useState(
     {
       menuItem: { id: '', title: '', description: '', recipe: '', serving: '' },
-      type: "snack",
-      errors: [],
+      type: "snack"
     }
   );
 
