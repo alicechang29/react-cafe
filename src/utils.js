@@ -1,4 +1,10 @@
-const MENU_ATTRIBUTES = ["id", "name", "description", "recipe", "serve"];
+const MENU_ATTRIBUTES = {
+  id: "",
+  name: "",
+  description: "",
+  recipe: "",
+  serve: ""
+};
 
 /**Normalizes the id string value
  *  formats to lowercase and replaces spaces with dashes  */
