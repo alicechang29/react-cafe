@@ -6,6 +6,8 @@ import { Card, CardBody, CardTitle } from "reactstrap";
  * snacks: [{item}, ...]
  * drinks: [{item}, ...]
  *
+ * State: none
+ *
  * App -> { Home }
  */
 
