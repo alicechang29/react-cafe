@@ -31,7 +31,7 @@ class SnackOrBoozeAPI {
    * Adds item to the list of drinks or snacks
    * item {id, name, description, recipe, serve}
    */
-  static async addItem({ item, type }) {
+  static async addItem(item, type) {
     console.log("addItem");
 
     const response = await fetch(`${this.base_api_url}/${type}`, {
@@ -39,7 +39,7 @@ class SnackOrBoozeAPI {
       headers: {
         "Content-Type": "application/json"
       },
-      body: JSON.stringify({ item })
+      body: JSON.stringify({ ...item })
     });
     return await response.json();
   }
