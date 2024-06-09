@@ -1,0 +1,43 @@
+.Menu .card {
+  background-color: #101010d1;
+  color: #f0f2f5;
+  border: 20px solid rgba(16, 16, 16, 0.63);
+  box-shadow: inset 0 0 0 2px #ffffff;
+  box-sizing: border-box;
+}
+
+.Menu .list-group a {
+  margin-top: 1rem;
+  border-left: 5px dotted;
+  color: white;
+}
+
+.Menu .list-group a:not(:last-of-type) li {
+  border-bottom: none !important;
+}
+
+.Menu .list-group a:hover {
+  text-decoration: none;
+  border-left-style: solid;
+  border-left-width: 3px;
+}
+
+.Menu .list-group a:hover li {
+  margin-left: 2px;
+}
+
+.Menu .list-group-item {
+  background-color: transparent;
+  font-weight: bold;
+  color: white;
+}
+
+.Menu .list-group-item:hover {
+  cursor: pointer;
+}
+
+.Menu .inner-border {
+  border: 20px solid #101010d1;
+  box-shadow: inset 0 0 0 10px #ffffff;
+  box-sizing: border-box;
+}
