@@ -27,16 +27,6 @@
       "description": "Crisp!",
       "recipe": "Open can.",
       "serve": "Immediately."
-    },
-    {
-      "id": "dr-pepper",
-      "title": "",
-      "description": "cherry soda",
-      "recipe": "open can ",
-      "serving": "",
-      "name": "dr pepper",
-      "serve": "cold ",
-      "menu-type": "drink"
     }
   ],
   "snacks": [
@@ -60,22 +50,6 @@
       "description": "Tart and delicious.",
       "recipe": "Mix arugula, toasted walnuts, and thinly-sliced Parmesan cheese. Dress with lemon and olive oil.",
       "serve": "Place on tiny, precious little plates."
-    },
-    {
-      "id": "chicken-parm",
-      "title": "",
-      "description": "italian",
-      "recipe": "cook",
-      "serving": "",
-      "name": "chicken parm",
-      "serve": "hot"
-    },
-    {
-      "id": "chicken",
-      "name": "alice",
-      "description": "d",
-      "recipe": "d",
-      "serve": "ix"
     }
   ]
 }
