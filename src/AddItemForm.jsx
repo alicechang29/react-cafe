@@ -1,45 +1,50 @@
 import { useState } from "react";
 import { MENU_ATTRIBUTES, convertToId } from "./utils.js";
-import MenuItemInput from "./MenuItemInput.jsx";
+
+const defaultInitialFormData = {
+  menuItem: MENU_ATTRIBUTES,
+  type: "snacks"
+};
 
 /**
  * AddItemForm
  *
- * Props: addItem //FIXME:
+ * Props:
+ * - initialFormData
+ * - addItem: function to call in parent
  *
- * State: formData //FIXME:
+ * State: formData
 {
-  menuItems: {id: '', title: '', description: '', recipe: '', serving: ''}
-  type: "snack"
+ menuItem: { id: '', name: '', description: '', recipe: '', serve: '' },
+type: "snacks"
 }
  *
- * App -> { AddItemForm } -> MenuItemInput
+ * App -> { AddItemForm }
  */
 
-function AddItemForm({ addItem }) {
-  const initialFormData = {
-    menuItem: { id: '', name: '', description: '', recipe: '', serve: '' },
-    type: "snacks"
-  };
+function AddItemForm({ initialFormData = defaultInitialFormData, addItem }) {
   console.log("AddItemForm");
-  const [formData, setFormData] = useState(initialFormData);
 
-  /** Handle submission of form, normalizes form data inputs, resets form*/
+  const [formData, setFormData] = useState(initialFormData);
+  const [alertMsg, setAlertMsg] = useState(false);
+
+  /** Call parent function, converts form data id, resets form */
   function handleSubmit(evt) {
     evt.preventDefault();
-    console.log("AddItemFormDisplay: handleSubmit", { formData });
+    console.log("AddItemForm: handleSubmit", { formData });
 
-    formData.menuItem.id = convertToId(formData.menuItem.id); //TODO: check this
+    formData.menuItem.id = convertToId(formData.menuItem.id);
 
     addItem(formData);
 
     setFormData(initialFormData);
+
+    updateAlertMsg(true);
   }
 
 
-  /** Update form input. */
+  /** Update non-numeric form inputs. */
   function handleChange(evt) {
-    console.log(evt.target);
     const { name, value } = evt.target;
 
     if (name === "type") {
@@ -54,63 +59,62 @@ function AddItemForm({ addItem }) {
       }));
     }
 
+    updateAlertMsg(false);
   }
 
-  //TODO: how do i put the label htmlFor for my inputs
-  return (
-    <form className="AddItemFormDisplay" onSubmit={handleSubmit}>
-      <label htmlFor="AddItemFormDisplay-label">Add to the Menu</label>
+  /**Sets state of AlertMsg */
+  function updateAlertMsg(status) {
+    setAlertMsg(status);
+  }
 
-      {MENU_ATTRIBUTES.map(m => (
+
+  return (
+    <form className="AddItemForm" onSubmit={handleSubmit}>
+      <label htmlFor="AddItemForm-label">Add to the Menu</label>
+
+      {Object.keys(initialFormData.menuItem).map(m => (
         <input
-          id={"AddItemFormDisplay" + m}
-          key={"AddItemFormDisplay" + m}
+          id={"AddItemForm-" + m}
+          key={"AddItemForm-" + m}
           className="form-control"
           value={formData.menuItem[m]}
           name={m}
           placeholder={m}
           required
           onChange={handleChange}
+          aria-label={m}
         />
       ))}
 
-      <label htmlFor="AddItemFormDisplay-type"
+      <label htmlFor="AddItemForm-type"
         className="d-inline-flex">Snack or Drink?</label>
       <select
-        id="AddItemFormDisplay-type"
+        id="AddItemForm-type"
         name="type"
         value={formData.type}
         onChange={handleChange}
         className=
-        "form-control form-control-sm d-inline-flex AddItemFormDisplay-type"
+        "form-control form-control-sm d-inline-flex AddItemForm-type"
       >
         <option value="snacks">Snack</option>
         <option value="drinks">Drink</option>
       </select>
 
-
-      <button className="btn-primary btn btn-sm AddItemFormDisplay-addBtn">
+      <button className="btn-primary btn btn-sm AddItemForm-addBtn">
         Add to Menu!
       </button>
+
+      {alertMsg &&
+        <div className="alert alert-success" role="alert">
+          Thank you for submitting!
+        </div>
+      }
     </form >
 
   );
-
 
 }
 
 export default AddItemForm;
 
 
-/*
-{MENU_ATTRIBUTES.map((menuAttr, i) => (
-        <MenuItemInput
-          key={i}
-          menuAttr={menuAttr}
-          answer={formData[menuAttr]}
-          handleChange={handleChange} />
-      ))}
-
-
-
-*/
