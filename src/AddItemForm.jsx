@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { MENU_ATTRIBUTES, convertToId } from "./utils.js";
-// import MenuItemInput from "./MenuItemInput.jsx";
+import MenuItemInput from "./MenuItemInput.jsx";
 
 /**
  * AddItemForm
@@ -19,7 +19,7 @@ import { MENU_ATTRIBUTES, convertToId } from "./utils.js";
 function AddItemForm({ addItem }) {
   const initialFormData = {
     menuItem: { id: '', name: '', description: '', recipe: '', serve: '' },
-    type: "snack"
+    type: "snacks"
   };
   console.log("AddItemForm");
   const [formData, setFormData] = useState(initialFormData);
@@ -40,14 +40,19 @@ function AddItemForm({ addItem }) {
   /** Update form input. */
   function handleChange(evt) {
     console.log(evt.target);
-    const { name, value, option } = evt.target;
-    const menuType = document.querySelector("#menu-type").value;
+    const { name, value } = evt.target;
 
-    setFormData(currData => ({
-      ...currData,
-      menuItem: { ...currData.menuItem, [name]: value },
-      type: menuType
-    }));
+    if (name === "type") {
+      setFormData(currData => ({
+        ...currData,
+        [name]: value
+      }));
+    } else {
+      setFormData(currData => ({
+        ...currData,
+        menuItem: { ...currData.menuItem, [name]: value }
+      }));
+    }
 
   }
 
@@ -69,14 +74,24 @@ function AddItemForm({ addItem }) {
         />
       ))}
 
-      <label htmlFor="menu-type">Snack or Drink?</label>
-      <select name="menu-type" id="menu-type" onChange={handleChange}>
+      <label htmlFor="AddItemFormDisplay-type"
+        className="d-inline-flex">Snack or Drink?</label>
+      <select
+        id="AddItemFormDisplay-type"
+        name="type"
+        value={formData.type}
+        onChange={handleChange}
+        className=
+        "form-control form-control-sm d-inline-flex AddItemFormDisplay-type"
+      >
         <option value="snacks">Snack</option>
         <option value="drinks">Drink</option>
       </select>
 
 
-      <button>Add to Menu!</button>
+      <button className="btn-primary btn btn-sm AddItemFormDisplay-addBtn">
+        Add to Menu!
+      </button>
     </form >
 
   );
