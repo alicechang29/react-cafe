@@ -34,12 +34,6 @@ function App() {
   useEffect(function fetchItemsOnMount() {
     console.log("useEffect fetchItemsOnMount");
 
-    async function fetchItems() {
-      const snacks = await SnackOrBoozeApi.getSnacks();
-      const drinks = await SnackOrBoozeApi.getDrinks();
-      setItemsFetch({ snacks, drinks, isLoading: false });
-    }
-
     fetchItems();
   }, []);
 
@@ -47,13 +41,26 @@ function App() {
     return <p>Loading &hellip;</p>;
   }
 
-  //fn to addItems to menu //FIXME: not done
-  async function addItems(item, type) {
-    const addNewItem = await SnackOrBoozeApi.addItem(item, type);
+  //fn to fetch items //TODO: docstring
+  async function fetchItems() {
+    const snacks = await SnackOrBoozeApi.getSnacks();
+    const drinks = await SnackOrBoozeApi.getDrinks();
     setItemsFetch({ snacks, drinks, isLoading: false });
   }
 
+  //fn to addItems to menu //TODO: docstring
+  async function addItems(formData) {
+    console.log("App - addItems", formData);
 
+    await SnackOrBoozeApi.addItem(
+      formData.menuItem,
+      formData.type
+    );
+
+    //TODO: upon successful submission, navigate to...
+
+    fetchItems();
+  }
 
   return (
     <div className="App">
