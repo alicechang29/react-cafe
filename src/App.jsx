@@ -50,8 +50,8 @@ function App() {
   }
 
   /**adds new snack or drink to the DB via API*/
-  async function addItems(formData) {
-    console.log("App - addItems", formData);
+  async function addItem(formData) {
+    console.log("App - addItem", formData);
 
     await SnackOrBoozeApi.addItem(
       formData.menuItem,
@@ -83,7 +83,7 @@ function App() {
             element={<ItemLoader items={drinks} cantFindPath="/drinks" />} />
           <Route
             path="/add-item"
-            element={<AddItemForm addItem={addItems} />} />
+            element={<AddItemForm addItem={addItem} />} />
           <Route
             path="*"
             element={<p>Hmmm. I can't seem to find what you want.</p>} />
