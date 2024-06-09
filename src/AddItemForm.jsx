@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { MENU_ATTRIBUTES, convertToId } from "./utils.js";
-import MenuItemInput from "./MenuItemInput.jsx";
+// import MenuItemInput from "./MenuItemInput.jsx";
 
 /**
  * AddItemForm
@@ -17,24 +17,23 @@ import MenuItemInput from "./MenuItemInput.jsx";
  */
 
 function AddItemForm({ addItem }) {
+  const initialFormData = {
+    menuItem: { id: '', name: '', description: '', recipe: '', serve: '' },
+    type: "snack"
+  };
   console.log("AddItemForm");
-  const [formData, setFormData] = useState(
-    {
-      menuItem: { id: '', title: '', description: '', recipe: '', serving: '' },
-      type: "snack"
-    }
-  );
+  const [formData, setFormData] = useState(initialFormData);
 
-  /** Handle submission of form and normalizes form data inputs*/
+  /** Handle submission of form, normalizes form data inputs, resets form*/
   function handleSubmit(evt) {
     evt.preventDefault();
     console.log("AddItemFormDisplay: handleSubmit", { formData });
 
-    addItem(currData => ({
-      ...currData,
-      id: convertToId(formData.id)
-    })
-    );
+    formData.menuItem.id = convertToId(formData.menuItem.id); //TODO: check this
+
+    addItem(formData);
+
+    setFormData(initialFormData);
   }
 
 
@@ -72,8 +71,8 @@ function AddItemForm({ addItem }) {
 
       <label htmlFor="menu-type">Snack or Drink?</label>
       <select name="menu-type" id="menu-type" onChange={handleChange}>
-        <option value="snack">Snack</option>
-        <option value="drink">Drink</option>
+        <option value="snacks">Snack</option>
+        <option value="drinks">Drink</option>
       </select>
 
 
