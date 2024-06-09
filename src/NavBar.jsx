@@ -14,9 +14,9 @@ function NavBar() {
           Snack or Booze
         </Link>
         <Nav className="ms-auto" navbar>
-          <NavItem><NavLink to="/snacks">Snacks </NavLink> </NavItem>
-          <NavItem><NavLink to="/drinks">Drinks </NavLink></NavItem>
-          <NavItem> <NavLink to="/add-item">Add Item </NavLink></NavItem>
+          <NavItem><NavLink to="/snacks">Snacks</NavLink> </NavItem>
+          <NavItem><NavLink to="/drinks">Drinks</NavLink></NavItem>
+          <NavItem> <NavLink to="/add-item">Add Item</NavLink></NavItem>
         </Nav>
       </div>
     </nav>
