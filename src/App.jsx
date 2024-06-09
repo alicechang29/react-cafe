@@ -16,7 +16,7 @@ import "./App.css";
  * State:
  * - itemsFetch:
  * {snacks: [item,item, ...], drinks: [item,item, ...], isLoading: true|false}
- *     where item is {id, name, description, recipe, serve}
+ *     where each item is {id, name, description, recipe, serve}
  */
 
 function App() {
@@ -31,6 +31,7 @@ function App() {
   const { snacks, drinks, isLoading } = itemsFetch;
   console.log("* App %o", { snacks, drinks, isLoading });
 
+  /**Fetches data on component mount*/
   useEffect(function fetchItemsOnMount() {
     console.log("useEffect fetchItemsOnMount");
 
@@ -41,14 +42,14 @@ function App() {
     return <p>Loading &hellip;</p>;
   }
 
-  //fn to fetch items //TODO: docstring
+  /**fetches snacks and drinks data from API*/
   async function fetchItems() {
     const snacks = await SnackOrBoozeApi.getSnacks();
     const drinks = await SnackOrBoozeApi.getDrinks();
     setItemsFetch({ snacks, drinks, isLoading: false });
   }
 
-  //fn to addItems to menu //TODO: docstring
+  /**adds new snack or drink to the DB via API*/
   async function addItems(formData) {
     console.log("App - addItems", formData);
 
@@ -56,8 +57,6 @@ function App() {
       formData.menuItem,
       formData.type
     );
-
-    //TODO: upon successful submission, navigate to...
 
     fetchItems();
   }
