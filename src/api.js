@@ -7,9 +7,10 @@
 class SnackOrBoozeAPI {
   static base_api_url = "http://localhost:5001";
 
-  /** Fetch list of snacks
+  /** getSnacks
+   * Fetch list of snacks
    * [{id, name, description, recipe, serve}, ...]
-   * */
+  */
 
   static async getSnacks() {
     console.log("getSnacks");
@@ -17,9 +18,10 @@ class SnackOrBoozeAPI {
     return await response.json();
   }
 
-  /** Fetch list of drinks
+  /** getDrinks
+   * Fetch list of drinks
    * [{id, name, description, recipe, serve}, ...]
-   * */
+  */
 
   static async getDrinks() {
     console.log("getDrinks");
@@ -27,10 +29,12 @@ class SnackOrBoozeAPI {
     return await response.json();
   }
 
-  /**
+  /** addItem
    * Adds item to the list of drinks or snacks
-   * item {id, name, description, recipe, serve}
-   */
+   * item: {id, name, description, recipe, serve}
+   * type: "snacks" || "drinks"
+  */
+
   static async addItem(item, type) {
     console.log("addItem");
 
