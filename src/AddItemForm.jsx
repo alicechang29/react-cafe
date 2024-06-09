@@ -26,17 +26,6 @@ function AddItemForm({ addItem }) {
     }
   );
 
-  // /** Returns initial formData state { menuAttr: "" } */
-  // function getInitialState() {
-  //   const menuItems = {};
-
-  //   for (const m of MENU_ATTRIBUTES) {
-  //     menuItems[m] = "";
-  //   }
-
-  //   return { menuItems, type: "snack" };
-  // }
-
   /** Handle submission of form and normalizes form data inputs*/
   function handleSubmit(evt) {
     evt.preventDefault();
