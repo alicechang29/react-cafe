@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { useNavigate } from "react-router-dom";
 import { MENU_ATTRIBUTES, convertToId } from "./utils.js";
 
 const defaultInitialFormData = {
@@ -27,19 +28,24 @@ function AddItemForm({ initialFormData = defaultInitialFormData, addItem }) {
 
   const [formData, setFormData] = useState(initialFormData);
   const [alertMsg, setAlertMsg] = useState(false);
+  const navigate = useNavigate();
 
   /** Call parent function, converts form data id, resets form */
-  function handleSubmit(evt) {
+  async function handleSubmit(evt) {
     evt.preventDefault();
     console.log("AddItemForm: handleSubmit", { formData });
 
     formData.menuItem.id = convertToId(formData.menuItem.id);
 
-    addItem(formData);
+    await addItem(formData);
 
     setFormData(initialFormData);
 
     updateAlertMsg(true);
+
+    setTimeout(() => {
+      navigate("/");
+    }, 2000);
   }
 
 
