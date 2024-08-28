@@ -29,6 +29,11 @@ function App() {
   /**Fetches data on component mount*/
   useEffect(function fetchItemsOnMount() {
     console.log("useEffect fetchItemsOnMount");
+    async function fetchItems() {
+      const snacks = await AliceCafeAPI.getSnacks();
+      const drinks = await AliceCafeAPI.getDrinks();
+      setItemsFetch({ snacks, drinks, isLoading: false });
+    }
 
     fetchItems();
   }, []);
@@ -37,23 +42,21 @@ function App() {
     return <p>Loading &hellip;</p>;
   }
 
-  /**fetches snacks and drinks data from API*/
-  async function fetchItems() {
-    const snacks = await AliceCafeAPI.getSnacks();
-    const drinks = await AliceCafeAPI.getDrinks();
-    setItemsFetch({ snacks, drinks, isLoading: false });
-  }
-
   /**adds new snack or drink to the DB via API*/
-  async function addItem(formData) {
-    console.log("App - addItem", formData);
+  async function addItem({ menuItem, type }) {
+    console.log("App - addItem", { menuItem, type });
 
     await AliceCafeAPI.addItem(
-      formData.menuItem,
-      formData.type
+      menuItem,
+      type
     );
 
-    fetchItems();
+    //add items to state
+    setItemsFetch(curr => ({
+      ...curr,
+      [type]: [...curr[type], menuItem],
+    }));
+
   }
 
   return (
