@@ -27,13 +27,6 @@
       "description": "Crisp!",
       "recipe": "Open can.",
       "serve": "Immediately."
-    },
-    {
-      "id": "dr-pepper",
-      "name": "dr pepper",
-      "description": "dr pepper",
-      "recipe": "dr pepper",
-      "serve": "dr pepper"
     }
   ],
   "snacks": [
