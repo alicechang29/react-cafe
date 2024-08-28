@@ -20,7 +20,7 @@ function Home({ snacks, drinks }) {
         <CardBody className="text-center">
           <CardTitle>
             <h3 className="fw-bold">
-              Welcome to Silicon Valley's premier dive cafe!
+              Welcome to Alice's Cafe!
             </h3>
             <p>Snacks: {snacks.length}</p>
             <p>Drinks: {drinks.length}</p>

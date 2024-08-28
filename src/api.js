@@ -4,7 +4,7 @@
  */
 
 
-class SnackOrBoozeAPI {
+class AliceCafeAPI {
   static base_api_url = "http://localhost:5001";
 
   /** getSnacks
@@ -50,4 +50,4 @@ class SnackOrBoozeAPI {
 
 }
 
-export default SnackOrBoozeAPI;
+export default AliceCafeAPI;

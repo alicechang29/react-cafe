@@ -11,7 +11,7 @@ function NavBar() {
     <nav className="NavBar navbar navbar-expand-md">
       <div className="container-fluid">
         <Link className="navbar-brand" to="/">
-          Snack or Booze
+          Alice's Cafe
         </Link>
         <Nav className="ms-auto" navbar>
           <NavItem><NavLink to="/snacks">Snacks</NavLink> </NavItem>

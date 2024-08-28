@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 import NavBar from "./NavBar";
 import RoutesList from "./RoutesList";
-import SnackOrBoozeApi from "./api";
+import AliceCafeAPI from "./api";
 import "./App.css";
 
 /** Snack or Booze main application.
@@ -39,8 +39,8 @@ function App() {
 
   /**fetches snacks and drinks data from API*/
   async function fetchItems() {
-    const snacks = await SnackOrBoozeApi.getSnacks();
-    const drinks = await SnackOrBoozeApi.getDrinks();
+    const snacks = await AliceCafeAPI.getSnacks();
+    const drinks = await AliceCafeAPI.getDrinks();
     setItemsFetch({ snacks, drinks, isLoading: false });
   }
 
@@ -48,7 +48,7 @@ function App() {
   async function addItem(formData) {
     console.log("App - addItem", formData);
 
-    await SnackOrBoozeApi.addItem(
+    await AliceCafeAPI.addItem(
       formData.menuItem,
       formData.type
     );

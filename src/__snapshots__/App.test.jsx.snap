@@ -1,0 +1,9 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`matches the screenshot 1`] = `
+<div>
+  <p>
+    Loading …
+  </p>
+</div>
+`;
