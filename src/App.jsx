@@ -4,7 +4,7 @@ import RoutesList from "./RoutesList";
 import AliceCafeAPI from "./api";
 import "./App.css";
 
-/** Snack or Booze main application.
+/** Main application.
  *
  * Props: (none)
  *
