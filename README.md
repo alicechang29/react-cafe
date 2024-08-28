@@ -28,3 +28,5 @@ Users have the functionality to:
    ```
    npm run start-be
    ```
+
+To run tests: `npm run test`
