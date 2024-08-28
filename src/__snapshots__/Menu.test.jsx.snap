@@ -1,0 +1,81 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`renders without crashing for drinks 1`] = `
+<DocumentFragment>
+  <section
+    class="col-md-4"
+  >
+    <div
+      class="card"
+    >
+      <div
+        class="card-body"
+      >
+        <div
+          class="fw-bold text-center card-title"
+        >
+          DRINKS Menu
+        </div>
+        <p
+          class="card-text"
+        >
+          Try one of our delicious menu items!
+        </p>
+        <ul
+          class="list-group"
+        >
+          <a
+            href="/drinks/0"
+          >
+            <li
+              class="list-group-item"
+            >
+              test drink
+            </li>
+          </a>
+        </ul>
+      </div>
+    </div>
+  </section>
+</DocumentFragment>
+`;
+
+exports[`renders without crashing for snacks 1`] = `
+<DocumentFragment>
+  <section
+    class="col-md-4"
+  >
+    <div
+      class="card"
+    >
+      <div
+        class="card-body"
+      >
+        <div
+          class="fw-bold text-center card-title"
+        >
+          SNACKS Menu
+        </div>
+        <p
+          class="card-text"
+        >
+          Try one of our delicious menu items!
+        </p>
+        <ul
+          class="list-group"
+        >
+          <a
+            href="/snacks/0"
+          >
+            <li
+              class="list-group-item"
+            >
+              test snack
+            </li>
+          </a>
+        </ul>
+      </div>
+    </div>
+  </section>
+</DocumentFragment>
+`;

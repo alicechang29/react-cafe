@@ -1,0 +1,33 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`Home component > matches a snapshot 1`] = `
+<DocumentFragment>
+  <section
+    class="col-md-8"
+  >
+    <div
+      class="card"
+    >
+      <div
+        class="text-center card-body"
+      >
+        <div
+          class="card-title"
+        >
+          <h3
+            class="fw-bold"
+          >
+            Welcome to Alice's Cafe!
+          </h3>
+          <p>
+            Snacks: 1
+          </p>
+          <p>
+            Drinks: 2
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+</DocumentFragment>
+`;

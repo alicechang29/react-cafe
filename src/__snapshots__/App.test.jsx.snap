@@ -1,5 +1,570 @@
 // Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
 
+exports[`Cafe routes > renders a drink from the menu 1`] = `
+<DocumentFragment>
+  <div
+    class="App"
+  >
+    <nav
+      class="NavBar navbar navbar-expand-md"
+    >
+      <div
+        class="container-fluid"
+      >
+        <a
+          class="navbar-brand"
+          href="/"
+        >
+          Alice's Cafe
+        </a>
+        <ul
+          class="ms-auto navbar-nav"
+        >
+          <li
+            class="nav-item"
+          >
+            <a
+              class=""
+              href="/snacks"
+            >
+              Snacks
+            </a>
+             
+          </li>
+          <li
+            class="nav-item"
+          >
+            <a
+              aria-current="page"
+              class="active"
+              href="/drinks"
+            >
+              Drinks
+            </a>
+          </li>
+          <li
+            class="nav-item"
+          >
+             
+            <a
+              class=""
+              href="/add-item"
+            >
+              Add Item
+            </a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+    <div
+      class="RoutesList"
+    >
+      <main>
+        <section
+          class="Item"
+        >
+          <div
+            class="card"
+          >
+            <div
+              class="card-body"
+            >
+              <div
+                class="fw-bold text-center card-title"
+              >
+                Martini
+              </div>
+              <p
+                class="font-italic card-text"
+              >
+                A ice-cold, refreshing classic.
+              </p>
+              <p>
+                <b>
+                  Recipe:
+                </b>
+                 Mix 3 parts vodka & 1 part dry vermouth.
+              </p>
+              <p>
+                <b>
+                  Serve:
+                </b>
+                 Serve very cold, straight up.
+              </p>
+            </div>
+          </div>
+        </section>
+      </main>
+    </div>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`Cafe routes > renders a snack from the menu 1`] = `
+<DocumentFragment>
+  <div
+    class="App"
+  >
+    <nav
+      class="NavBar navbar navbar-expand-md"
+    >
+      <div
+        class="container-fluid"
+      >
+        <a
+          class="navbar-brand"
+          href="/"
+        >
+          Alice's Cafe
+        </a>
+        <ul
+          class="ms-auto navbar-nav"
+        >
+          <li
+            class="nav-item"
+          >
+            <a
+              aria-current="page"
+              class="active"
+              href="/snacks"
+            >
+              Snacks
+            </a>
+             
+          </li>
+          <li
+            class="nav-item"
+          >
+            <a
+              class=""
+              href="/drinks"
+            >
+              Drinks
+            </a>
+          </li>
+          <li
+            class="nav-item"
+          >
+             
+            <a
+              class=""
+              href="/add-item"
+            >
+              Add Item
+            </a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+    <div
+      class="RoutesList"
+    >
+      <main>
+        <section
+          class="Item"
+        >
+          <div
+            class="card"
+          >
+            <div
+              class="card-body"
+            >
+              <div
+                class="fw-bold text-center card-title"
+              >
+                Nachos
+              </div>
+              <p
+                class="font-italic card-text"
+              >
+                An American classic!
+              </p>
+              <p>
+                <b>
+                  Recipe:
+                </b>
+                 Cover expensive, organic tortilla chips with Cheez Whiz.
+              </p>
+              <p>
+                <b>
+                  Serve:
+                </b>
+                 Serve in a hand-thrown ceramic bowl, garnished with canned black olives
+              </p>
+            </div>
+          </div>
+        </section>
+      </main>
+    </div>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`Cafe routes > renders the add item form 1`] = `
+<DocumentFragment>
+  <div
+    class="App"
+  >
+    <nav
+      class="NavBar navbar navbar-expand-md"
+    >
+      <div
+        class="container-fluid"
+      >
+        <a
+          class="navbar-brand"
+          href="/"
+        >
+          Alice's Cafe
+        </a>
+        <ul
+          class="ms-auto navbar-nav"
+        >
+          <li
+            class="nav-item"
+          >
+            <a
+              aria-current="page"
+              class="active"
+              href="/snacks"
+            >
+              Snacks
+            </a>
+             
+          </li>
+          <li
+            class="nav-item"
+          >
+            <a
+              class=""
+              href="/drinks"
+            >
+              Drinks
+            </a>
+          </li>
+          <li
+            class="nav-item"
+          >
+             
+            <a
+              class=""
+              href="/add-item"
+            >
+              Add Item
+            </a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+    <div
+      class="RoutesList"
+    >
+      <main>
+        <section
+          class="col-md-4"
+        >
+          <div
+            class="card"
+          >
+            <div
+              class="card-body"
+            >
+              <div
+                class="fw-bold text-center card-title"
+              >
+                SNACKS Menu
+              </div>
+              <p
+                class="card-text"
+              >
+                Try one of our delicious menu items!
+              </p>
+              <ul
+                class="list-group"
+              />
+            </div>
+          </div>
+        </section>
+      </main>
+    </div>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`Cafe routes > renders the drink menu 1`] = `
+<DocumentFragment>
+  <div
+    class="App"
+  >
+    <nav
+      class="NavBar navbar navbar-expand-md"
+    >
+      <div
+        class="container-fluid"
+      >
+        <a
+          class="navbar-brand"
+          href="/"
+        >
+          Alice's Cafe
+        </a>
+        <ul
+          class="ms-auto navbar-nav"
+        >
+          <li
+            class="nav-item"
+          >
+            <a
+              class=""
+              href="/snacks"
+            >
+              Snacks
+            </a>
+             
+          </li>
+          <li
+            class="nav-item"
+          >
+            <a
+              aria-current="page"
+              class="active"
+              href="/drinks"
+            >
+              Drinks
+            </a>
+          </li>
+          <li
+            class="nav-item"
+          >
+             
+            <a
+              class=""
+              href="/add-item"
+            >
+              Add Item
+            </a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+    <div
+      class="RoutesList"
+    >
+      <main>
+        <section
+          class="col-md-4"
+        >
+          <div
+            class="card"
+          >
+            <div
+              class="card-body"
+            >
+              <div
+                class="fw-bold text-center card-title"
+              >
+                DRINKS Menu
+              </div>
+              <p
+                class="card-text"
+              >
+                Try one of our delicious menu items!
+              </p>
+              <ul
+                class="list-group"
+              />
+            </div>
+          </div>
+        </section>
+      </main>
+    </div>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`Cafe routes > renders the home snapshot 1`] = `
+<DocumentFragment>
+  <div
+    class="App"
+  >
+    <nav
+      class="NavBar navbar navbar-expand-md"
+    >
+      <div
+        class="container-fluid"
+      >
+        <a
+          class="navbar-brand"
+          href="/"
+        >
+          Alice's Cafe
+        </a>
+        <ul
+          class="ms-auto navbar-nav"
+        >
+          <li
+            class="nav-item"
+          >
+            <a
+              class=""
+              href="/snacks"
+            >
+              Snacks
+            </a>
+             
+          </li>
+          <li
+            class="nav-item"
+          >
+            <a
+              class=""
+              href="/drinks"
+            >
+              Drinks
+            </a>
+          </li>
+          <li
+            class="nav-item"
+          >
+             
+            <a
+              class=""
+              href="/add-item"
+            >
+              Add Item
+            </a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+    <div
+      class="RoutesList"
+    >
+      <main>
+        <section
+          class="col-md-8"
+        >
+          <div
+            class="card"
+          >
+            <div
+              class="text-center card-body"
+            >
+              <div
+                class="card-title"
+              >
+                <h3
+                  class="fw-bold"
+                >
+                  Welcome to Alice's Cafe!
+                </h3>
+                <p>
+                  Snacks: 0
+                </p>
+                <p>
+                  Drinks: 0
+                </p>
+              </div>
+            </div>
+          </div>
+        </section>
+      </main>
+    </div>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`Cafe routes > renders the snack menu 1`] = `
+<DocumentFragment>
+  <div
+    class="App"
+  >
+    <nav
+      class="NavBar navbar navbar-expand-md"
+    >
+      <div
+        class="container-fluid"
+      >
+        <a
+          class="navbar-brand"
+          href="/"
+        >
+          Alice's Cafe
+        </a>
+        <ul
+          class="ms-auto navbar-nav"
+        >
+          <li
+            class="nav-item"
+          >
+            <a
+              aria-current="page"
+              class="active"
+              href="/snacks"
+            >
+              Snacks
+            </a>
+             
+          </li>
+          <li
+            class="nav-item"
+          >
+            <a
+              class=""
+              href="/drinks"
+            >
+              Drinks
+            </a>
+          </li>
+          <li
+            class="nav-item"
+          >
+             
+            <a
+              class=""
+              href="/add-item"
+            >
+              Add Item
+            </a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+    <div
+      class="RoutesList"
+    >
+      <main>
+        <section
+          class="col-md-4"
+        >
+          <div
+            class="card"
+          >
+            <div
+              class="card-body"
+            >
+              <div
+                class="fw-bold text-center card-title"
+              >
+                SNACKS Menu
+              </div>
+              <p
+                class="card-text"
+              >
+                Try one of our delicious menu items!
+              </p>
+              <ul
+                class="list-group"
+              />
+            </div>
+          </div>
+        </section>
+      </main>
+    </div>
+  </div>
+</DocumentFragment>
+`;
+
 exports[`matches the screenshot 1`] = `
 <div>
   <p>

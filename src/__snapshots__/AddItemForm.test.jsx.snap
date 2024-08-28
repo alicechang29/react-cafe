@@ -1,0 +1,87 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`renders without crashing 1`] = `
+<DocumentFragment>
+  <form
+    class="AddItemForm"
+  >
+    <label
+      for="AddItemForm-label"
+    >
+      Add to the Menu
+    </label>
+    <input
+      aria-label="id"
+      class="form-control"
+      id="AddItemForm-id"
+      name="id"
+      placeholder="id"
+      required=""
+      value=""
+    />
+    <input
+      aria-label="name"
+      class="form-control"
+      id="AddItemForm-name"
+      name="name"
+      placeholder="name"
+      required=""
+      value=""
+    />
+    <input
+      aria-label="description"
+      class="form-control"
+      id="AddItemForm-description"
+      name="description"
+      placeholder="description"
+      required=""
+      value=""
+    />
+    <input
+      aria-label="recipe"
+      class="form-control"
+      id="AddItemForm-recipe"
+      name="recipe"
+      placeholder="recipe"
+      required=""
+      value=""
+    />
+    <input
+      aria-label="serve"
+      class="form-control"
+      id="AddItemForm-serve"
+      name="serve"
+      placeholder="serve"
+      required=""
+      value=""
+    />
+    <label
+      class="d-inline-flex"
+      for="AddItemForm-type"
+    >
+      Snack or Drink?
+    </label>
+    <select
+      class="form-control form-control-sm d-inline-flex AddItemForm-type"
+      id="AddItemForm-type"
+      name="type"
+    >
+      <option
+        value="snacks"
+      >
+        Snack
+      </option>
+      <option
+        value="drinks"
+      >
+        Drink
+      </option>
+    </select>
+    <button
+      class="btn-primary btn btn-sm AddItemForm-addBtn"
+    >
+      Add to Menu!
+    </button>
+  </form>
+</DocumentFragment>
+`;
