@@ -8,7 +8,8 @@
     "test": "vitest",
     "test:cov": "vitest --coverage",
     "start": "vite --open",
-    "start-be": "json-server --watch db.json --port 5001"
+    "start-be": "json-server --watch db.json --port 5001",
+    "deploy": "npm run build && cp build/index.html build/200.html && surge build"
   },
   "devDependencies": {
     "@testing-library/jest-dom": "*",
