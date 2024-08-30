@@ -33,6 +33,7 @@
     "react-router-dom": "*",
     "reactstrap": "*",
     "slugify": "*",
+    "surge": "^0.24.6",
     "uuid": "^10.0.0"
   }
 }
