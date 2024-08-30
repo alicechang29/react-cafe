@@ -5,7 +5,7 @@
 
 
 class AliceCafeAPI {
-  static base_api_url = "http://localhost:5001";
+  static base_api_url = import.meta.env.VITE_API_BASE_URL;
 
   /** getSnacks
    * Fetch list of snacks
